@@ -1,0 +1,14 @@
+
+判断两个二叉树是否一样（结构一样，每个对应的结点的值也是一样）。
+递归
+face++ 一面第一题
+
+var isSameTree = function(p, q) {
+    if(p == null && q == null) return true;
+    if(p == null || q == null) return false;
+    if (p.val == q.val) {
+        return isSameTree(p.left, q.left) && isSameTree(p.right, q.right);
+    } else {
+        return false;
+    }
+};
